@@ -1,5 +1,5 @@
 phantom:
-  address: localhost:9999
+  address: 192.168.1.74:9999
   ammo_type: phantom
   ammofile: ammo.txt
   load_profile:
