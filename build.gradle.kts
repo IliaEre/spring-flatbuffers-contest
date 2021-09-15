@@ -16,6 +16,12 @@ repositories {
 }
 
 dependencies {
+    implementation("io.prometheus:simpleclient:0.12.0")
+    implementation("org.springframework.boot:spring-boot-starter-actuator:2.5.4")
+
+    // https://mvnrepository.com/artifact/com.google.flatbuffers/flatbuffers-java
+    implementation("com.google.flatbuffers:flatbuffers-java:2.0.3")
+
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")

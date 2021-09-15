@@ -1,0 +1,8 @@
+2021-09-12 09:55:00.944 +0000 [info] [] Start
+2021-09-12 09:55:34.128 +0000 [error] [phantom_logger] bq_sleep: Operation canceled
+2021-09-12 09:55:34.130 +0000 [error] [benchmark_io stream_method brief_logger] bq_sleep: Operation canceled
+2021-09-12 09:55:34.128 +0000 [error] [monitor_io] bq_sleep: Operation canceled
+2021-09-12 09:55:34.132 +0000 [error] [monitor_io] bq_sleep: Operation canceled
+2021-09-12 09:55:34.129 +0000 [error] [benchmark_io stream_method benchmark_logger] bq_sleep: Operation canceled
+2021-09-12 09:55:34.149 +0000 [error] [benchmark_io 691] poll: Operation canceled
+2021-09-12 09:55:34.151 +0000 [info] [] Exit

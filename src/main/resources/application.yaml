@@ -1,6 +1,12 @@
 server:
   port: 9999
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health, prometheus, info"
+
 spring:
   application:
     name: flatbuffer-demo
@@ -17,6 +23,9 @@ spring:
       WRITE_DATES_AS_TIMESTAMPS: false
       WRITE_DATE_KEYS_AS_TIMESTAMPS: false
       WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS: false
+  mongodb:
+    url: "mongodb://localhost:27017/"
+
 
 logging:
   level:

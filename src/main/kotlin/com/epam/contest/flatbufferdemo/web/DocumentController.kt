@@ -1,6 +1,6 @@
 package com.epam.contest.flatbufferdemo.web
 
-import com.epam.contest.flatbufferdemo.dto.Document
+import Complaince.Document.Document
 import com.epam.contest.flatbufferdemo.dto.UsefulDocument
 import com.epam.contest.flatbufferdemo.service.DocumentService
 import com.epam.contest.flatbufferdemo.web.ClassicDocumentController.Companion.MAIN_URL
@@ -28,15 +28,14 @@ interface DocumentController {
      * @param document
      * @return I wanna create it simple and reusable for this example
      * */
-    fun saveDocument(document: Mono<Document>): Mono<Any>
+    fun saveDocument(document: Document): Mono<Any>
 }
 
 @RestController
 @RequestMapping(
-    MAIN_URL,
-    produces = [MediaType.APPLICATION_JSON_VALUE],
-    consumes = [MediaType.APPLICATION_JSON_VALUE]
+    MAIN_URL
 )
+@CrossOrigin
 internal class ClassicDocumentController(
     private val documentService: DocumentService
 ): DocumentController {
@@ -46,11 +45,14 @@ internal class ClassicDocumentController(
         documentService.getAll()
 
     @PostMapping
-    override fun saveDocument(@RequestBody document: Mono<Document>): Mono<Any> =
+    override fun saveDocument(@RequestBody document: Document): Mono<Any> =
         documentService.validateAndSave(document)
+            .log()
+            .name("saveDocuments")
+            .tag("ClassicController", "saveDocuments")
             .map { status -> ResponseEntity.ok(status) }
 
     companion object {
-        const val MAIN_URL = "document/v1/complain/"
+        const val MAIN_URL = "document/v2/complain/"
     }
 }

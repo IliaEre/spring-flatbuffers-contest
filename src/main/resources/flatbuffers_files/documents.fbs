@@ -1,0 +1,41 @@
+
+namespace Complaince.Document;
+
+enum Status:short { OK = 0, NEW = 1, RESERVED = 2, CANCELLED = 3 }
+
+table Document {
+    id:string;
+    name:string;
+    description:Description;
+    complaint:Complaint;
+}
+
+table Description {
+    title:string;
+    department:string;
+    unique_code:string;
+}
+
+table Complaint {
+    id:string;
+    active:bool;
+    status:Status;
+    owner:[Owner];
+}
+
+table Owner {
+    name:string;
+    surname:string;
+    address:Address;
+}
+
+table Address {
+    country:string;
+    country_code:string;
+    city:string;
+    street:string;
+    building:string;
+    flat:short;
+}
+
+root_type Document;
