@@ -1,0 +1,26 @@
+android: {enabled: false, package: yandextank.plugins.Android}
+autostop:
+  autostop: ['http(5xx,100%,30s)', 'net(xx,1,30)']
+  enabled: true
+  package: yandextank.plugins.Autostop
+bfg: {enabled: false, package: yandextank.plugins.Bfg}
+console: {enabled: true, package: yandextank.plugins.Console}
+core: {}
+influx: {enabled: false, package: yandextank.plugins.Influx}
+jmeter: {enabled: false, package: yandextank.plugins.JMeter}
+json_report: {enabled: true, package: yandextank.plugins.JsonReport}
+overload: {enabled: false, package: yandextank.plugins.DataUploader}
+phantom:
+  address: 192.168.1.74:9999
+  ammo_type: phantom
+  ammofile: ammo-flat.txt
+  connection_test: true
+  enabled: true
+  load_profile: {load_type: rps, schedule: 'line(100, 400, 2m)'}
+  package: yandextank.plugins.Phantom
+  ssl: false
+  writelog: all
+rcassert: {enabled: true, package: yandextank.plugins.RCAssert}
+rcheck: {enabled: true, package: yandextank.plugins.ResourceCheck}
+shellexec: {enabled: true, package: yandextank.plugins.ShellExec}
+telegraf: {enabled: true, package: yandextank.plugins.Telegraf}

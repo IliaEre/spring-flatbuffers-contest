@@ -1,10 +1,10 @@
 phantom:
-  address: 192.168.1.74:9999
+  address: 192.168.1.73:9999
   ammo_type: phantom
-  ammofile: ammo.txt
+  ammofile: ammo-fb.txt
   load_profile:
     load_type: rps
-    schedule: line(100, 400, 2m) # starting from 1rps growing linearly to 10rps during 10 minutes
+    schedule: line(1, 1, 10s)
   writelog: all
   ssl: false
   connection_test: true

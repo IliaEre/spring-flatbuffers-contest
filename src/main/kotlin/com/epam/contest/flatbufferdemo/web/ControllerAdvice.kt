@@ -10,10 +10,14 @@ import org.springframework.web.bind.annotation.RestControllerAdvice
 @RestControllerAdvice
 class ControllerAdvice {
 
+    /**
+     * You shouldn't use this way for production area.
+     * It's a simple example for logging.
+     * */
     @ExceptionHandler(Exception::class)
     @ResponseStatus(HttpStatus.BAD_GATEWAY)
     fun handleException(ex: Exception) {
-        logger.error("problem with: ${ex.message}")
+        logger.error("problem with: $ex")
     }
 
     private companion object {

@@ -4,7 +4,6 @@ import Complaince.Document.Document
 import com.epam.contest.flatbufferdemo.dto.UsefulDocument
 import com.epam.contest.flatbufferdemo.service.DocumentService
 import com.epam.contest.flatbufferdemo.web.ClassicDocumentController.Companion.MAIN_URL
-import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import reactor.core.publisher.Flux
@@ -32,17 +31,14 @@ interface DocumentController {
 }
 
 @RestController
-@RequestMapping(
-    MAIN_URL
-)
+@RequestMapping(MAIN_URL)
 @CrossOrigin
 internal class ClassicDocumentController(
     private val documentService: DocumentService
 ): DocumentController {
 
     @GetMapping
-    override fun getAll(): Flux<UsefulDocument> =
-        documentService.getAll()
+    override fun getAll(): Flux<UsefulDocument> = documentService.getAll()
 
     @PostMapping
     override fun saveDocument(@RequestBody document: Document): Mono<Any> =

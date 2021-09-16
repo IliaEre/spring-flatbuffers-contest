@@ -22,7 +22,7 @@ fun Complaince.Document.Document.toImportantDoc() =
 @ExperimentalStdlibApi
 fun parseOwners(vector: FbOwner.Vector): List<Owner> =
     buildList {
-        for (index in 0..vector.length()) {
+        for (index in 0 until vector.length()) {
             add(
                 Owner(
                     name = vector[index].name(),
