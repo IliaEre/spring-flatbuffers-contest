@@ -39,8 +39,20 @@ class FlatbufferDecoder: FlatbuffersCodecSupport(), Decoder<Table> {
         targetType: ResolvableType,
         mimeType: MimeType?,
         hints: MutableMap<String, Any>?
-    ): Table =
-        Document.getRootAsDocument(buffer.asByteBuffer())
+    ): Table {
+        val bytes = ByteArray(buffer.readableByteCount())
+        buffer.read(bytes)
+        DataBufferUtils.release(buffer)
+        val buff = java.nio.ByteBuffer.wrap(bytes)
+        return Document.getRootAsDocument(buff)
+    }
+
+    fun decodeAsOldWay(
+        buffer: DataBuffer,
+        targetType: ResolvableType,
+        mimeType: MimeType?,
+        hints: MutableMap<String, Any>?
+    ): Table = Document.getRootAsDocument(buffer.asByteBuffer())
 
     override fun getDecodableMimeTypes(): MutableList<MimeType> = MIME_TYPES
 }

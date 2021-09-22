@@ -4,7 +4,7 @@ phantom:
   ammofile: ammo-fb.txt
   load_profile:
     load_type: rps
-    schedule: line(1, 1, 10s)
+    schedule: line(100, 250, 2m)
   writelog: all
   ssl: false
   connection_test: true

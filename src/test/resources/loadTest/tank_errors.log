@@ -1485,3 +1485,69 @@ NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.1.
 2021-09-16 14:14:20,182	File already exists: /var/loadtest/logs/2021-09-16_14-13-52.659431/monitoring_IPBFKu.xml
 2021-09-16 14:14:20,184	File already exists: /var/loadtest/logs/2021-09-16_14-13-52.659431/phantom_BeA_GK.conf
 2021-09-16 14:14:20,186	File already exists: /var/loadtest/logs/2021-09-16_14-13-52.659431/phantom_stat_mLfQJy.log
+2021-09-21 18:21:45,295	Failed to install monitoring agent to 192.168.1.73
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Telegraf/client.py", line 209, in install
+    out, errors, err_code = self.ssh.execute(cmd)
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 72, in execute
+    with self.connect() as client:
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 42, in connect
+    timeout=self.timeout, )
+  File "/usr/local/lib/python2.7/dist-packages/paramiko/client.py", line 362, in connect
+    raise NoValidConnectionsError(errors)
+NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.1.73
+2021-09-21 18:22:12,314	Job number is not available yet
+2021-09-21 18:22:12,316	Job number is not available yet
+2021-09-21 18:22:12,322	File already exists: /var/loadtest/logs/2021-09-21_18-21-44.779113/phantom_stdout_stderr_bjqekO.log
+2021-09-21 18:22:12,324	File already exists: /var/loadtest/logs/2021-09-21_18-21-44.779113/monitoring_GsUUS5.xml
+2021-09-21 18:22:12,327	File already exists: /var/loadtest/logs/2021-09-21_18-21-44.779113/phantom_stat_bQmUqN.log
+2021-09-21 18:22:12,329	File already exists: /var/loadtest/logs/2021-09-21_18-21-44.779113/phantom_wGtTQG.conf
+2021-09-21 18:22:12,332	File already exists: /var/loadtest/logs/2021-09-21_18-21-44.779113/answ_hnx7vl.log
+2021-09-21 18:22:12,335	File already exists: /var/loadtest/logs/2021-09-21_18-21-44.779113/phantom_ULYra4.log
+2021-09-21 18:22:12,339	File not found to collect: validation_error.yaml
+2021-09-21 18:22:12,342	File already exists: /var/loadtest/logs/2021-09-21_18-21-44.779113/phout_Ot2S7a.log
+2021-09-21 18:23:04,619	Failed to install monitoring agent to 192.168.1.73
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Telegraf/client.py", line 209, in install
+    out, errors, err_code = self.ssh.execute(cmd)
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 72, in execute
+    with self.connect() as client:
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 42, in connect
+    timeout=self.timeout, )
+  File "/usr/local/lib/python2.7/dist-packages/paramiko/client.py", line 362, in connect
+    raise NoValidConnectionsError(errors)
+NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.1.73
+2021-09-21 18:23:32,334	Job number is not available yet
+2021-09-21 18:23:32,336	Job number is not available yet
+2021-09-21 18:23:32,345	File already exists: /var/loadtest/logs/2021-09-21_18-23-04.006301/answ_3yWdAK.log
+2021-09-21 18:23:32,348	File already exists: /var/loadtest/logs/2021-09-21_18-23-04.006301/phantom_zm1HR5.log
+2021-09-21 18:23:32,351	File already exists: /var/loadtest/logs/2021-09-21_18-23-04.006301/phantom_RThN_b.conf
+2021-09-21 18:23:32,354	File not found to collect: validation_error.yaml
+2021-09-21 18:23:32,356	File already exists: /var/loadtest/logs/2021-09-21_18-23-04.006301/phantom_stat_GKjd0l.log
+2021-09-21 18:23:32,358	File already exists: /var/loadtest/logs/2021-09-21_18-23-04.006301/phantom_stdout_stderr_Kjrcku.log
+2021-09-21 18:23:32,360	File already exists: /var/loadtest/logs/2021-09-21_18-23-04.006301/phout_boTY05.log
+2021-09-21 18:23:32,361	File already exists: /var/loadtest/logs/2021-09-21_18-23-04.006301/monitoring_jwIt0W.xml
+2021-09-21 18:24:32,869	Failed to install monitoring agent to 192.168.1.73
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Telegraf/client.py", line 209, in install
+    out, errors, err_code = self.ssh.execute(cmd)
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 72, in execute
+    with self.connect() as client:
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 42, in connect
+    timeout=self.timeout, )
+  File "/usr/local/lib/python2.7/dist-packages/paramiko/client.py", line 362, in connect
+    raise NoValidConnectionsError(errors)
+NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.1.73
+2021-09-21 18:26:58,323	Autostop criterion requested test stop: net(xx,1,30)
+2021-09-21 18:26:58,331	Autostop criterion requested test stop: xx net codes count higher than 1 for 30s, since 1632248785
+2021-09-21 18:27:00,094	Job number is not available yet
+2021-09-21 18:27:00,097	Job number is not available yet
+2021-09-21 18:27:00,108	File already exists: /var/loadtest/logs/2021-09-21_18-24-29.577118/phout_4nC9EX.log
+2021-09-21 18:27:00,112	File already exists: /var/loadtest/logs/2021-09-21_18-24-29.577118/phantom_mlIeKG.conf
+2021-09-21 18:27:00,117	File already exists: /var/loadtest/logs/2021-09-21_18-24-29.577118/answ_pxqwXD.log
+2021-09-21 18:27:00,122	File already exists: /var/loadtest/logs/2021-09-21_18-24-29.577118/phantom_stat_8ldY10.log
+2021-09-21 18:27:00,127	File already exists: /var/loadtest/logs/2021-09-21_18-24-29.577118/phantom_qUNzpt.log
+2021-09-21 18:27:00,131	File already exists: /var/loadtest/logs/2021-09-21_18-24-29.577118/autostop_report.txt
+2021-09-21 18:27:00,133	File not found to collect: validation_error.yaml
+2021-09-21 18:27:00,136	File already exists: /var/loadtest/logs/2021-09-21_18-24-29.577118/phantom_stdout_stderr_PAIuML.log
+2021-09-21 18:27:00,139	File already exists: /var/loadtest/logs/2021-09-21_18-24-29.577118/monitoring_9t08lJ.xml
