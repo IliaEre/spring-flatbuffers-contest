@@ -14,6 +14,7 @@ abstract class FlatbuffersCodecSupport {
 
         const val DELIMITED_KEY = "delimited"
         const val DELIMITED_VALUE = "true"
+        const val DEFAULT_MESSAGE_MAX_SIZE = 256 * 1024
     }
 
     protected open fun supportsMimeType(@Nullable mimeType: MimeType?): Boolean =

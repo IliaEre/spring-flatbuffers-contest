@@ -13,6 +13,8 @@ import reactor.core.publisher.Mono
 
 class FlatbufferDecoder: FlatbuffersCodecSupport(), Decoder<Table> {
 
+    private val maxMessageSize = DEFAULT_MESSAGE_MAX_SIZE
+
     override fun canDecode(elementType: ResolvableType, mimeType: MimeType?): Boolean =
         Table::class.java.isAssignableFrom(elementType.toClass()) && supportsMimeType(mimeType)
 
@@ -31,7 +33,7 @@ class FlatbufferDecoder: FlatbuffersCodecSupport(), Decoder<Table> {
         mimeType: MimeType?,
         hints: MutableMap<String, Any>?
     ): Mono<Table> =
-        DataBufferUtils.join(inputStream)
+        DataBufferUtils.join(inputStream, maxMessageSize)
             .map { decode(it, elementType, mimeType, hints) }
 
     override fun decode(

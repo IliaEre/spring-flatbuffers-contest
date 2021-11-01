@@ -1,9 +1,0 @@
-2021-09-16 12:34:28.154 +0000 [info] [] Start
-2021-09-16 12:34:28.158 +0000 [error] [benchmark_io 010] format error
-2021-09-16 12:34:45.158 +0000 [error] [benchmark_io 003] connect: Connection timed out
-2021-09-16 12:34:45.165 +0000 [error] [monitor_io] bq_sleep: Operation canceled
-2021-09-16 12:34:45.165 +0000 [error] [benchmark_io stream_method benchmark_logger] bq_sleep: Operation canceled
-2021-09-16 12:34:45.165 +0000 [error] [phantom_logger] bq_sleep: Operation canceled
-2021-09-16 12:34:45.167 +0000 [error] [monitor_io] bq_sleep: Operation canceled
-2021-09-16 12:34:45.171 +0000 [error] [benchmark_io stream_method brief_logger] bq_sleep: Operation canceled
-2021-09-16 12:34:45.173 +0000 [info] [] Exit
