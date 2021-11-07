@@ -1,7 +1,0 @@
-462
-POST /document/v1/complain/ HTTP/1.1
-Content-Type: application/json
-Host: 192.168.1.74
-Content-Length: 354
-
-{"id":"0e056268-4074-4924-907c-33dbf1be0816","name":"documenthasnumber123","description":{"title":"GENERALTITLE","department":"OWN","unique_code":"0e056268-4074-4924-907c-33dbf1be0816"},"complaint":{"id":"b808de24-f8b0-4709-887a-ce770f2d24a3","active":true,"status":"OK","owner":[{"name":"Igor","surname":"Petrovich"},{"name":"Petr","surname":"Osetr"}]}}
