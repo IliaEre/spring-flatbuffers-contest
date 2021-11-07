@@ -1,12 +1,8 @@
-# Flatbuffer contest
-### version 0.0.2-SNAPSHOT
+# Spring flatbuffers contest
+
+### version 0.0.1-SNAPSHOT
 
 ---
-
-Goals: todo...
-
-
-
 
 ## `Flutbeffers sample service`
 
