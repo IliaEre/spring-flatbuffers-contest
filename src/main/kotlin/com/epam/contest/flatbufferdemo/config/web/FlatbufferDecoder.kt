@@ -49,12 +49,5 @@ class FlatbufferDecoder: FlatbuffersCodecSupport(), Decoder<Table> {
         return Document.getRootAsDocument(buff)
     }
 
-    fun decodeAsOldWay(
-        buffer: DataBuffer,
-        targetType: ResolvableType,
-        mimeType: MimeType?,
-        hints: MutableMap<String, Any>?
-    ): Table = Document.getRootAsDocument(buffer.asByteBuffer())
-
     override fun getDecodableMimeTypes(): MutableList<MimeType> = MIME_TYPES
 }
