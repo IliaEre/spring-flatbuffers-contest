@@ -1,10 +1,24 @@
-# spring-flatbuffers-contest
-flutbeffers messages with spring 
+# Spring flatbuffers contest
 
-### version 0.0.1-SNAPSHOT 
+### version 0.0.1-SNAPSHOT
 
-#### TODO
-1) added metrics
-2) profiling
-3) improve decoder/encoder
-4) tests
+---
+
+## `Flutbeffers sample service`
+
+Tools:
+– Spring boot  
+– Kotlin  
+– Flatbuffers  
+– Webflux  
+– MongoDb (reactive)  
+– Micrometr, prometheus, actuator  
+
+---
+
+#### TODO list:  
+0) remove old version of binary files
+1) add a peace of logic
+2) add tests
+3) add metrics and profiling 
+4) add sample with JSON (with the same rools)
